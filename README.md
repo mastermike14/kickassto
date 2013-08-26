@@ -33,3 +33,8 @@ Usage Examples
     KickassTo::Category::Games          
     KickassTo::Category::Apps
     KickassTo::Category::XXX 
+    
+Dependencies
+------------
+
+nokogiri & rest_client gems
