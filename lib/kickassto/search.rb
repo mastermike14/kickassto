@@ -6,7 +6,7 @@ module KickassTo
     attr_reader :torrents
     alias_method :results, :torrents
 
-    def initialize(query, category = "movies", sort_by = "seeders")
+    def initialize(query, category = "all", sort_by = "seeders")
 
       query = URI.escape(query)
       path = 'http://kickass.to/usearch/' + query + '%20category:' + category + '/?field=' + sort_by + '&sorder=desc'
