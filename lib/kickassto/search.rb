@@ -14,7 +14,7 @@ module KickassTo
       torrents = []
 
       doc.css("table.data tr").each do |row|
-        title = row.search('.torrentname a.normalgrey').text
+        title = row.search('.torrentname a.cellMainLink').text
         next if title == '' 
 
         seeders     = row.search('td')[4].text.to_i
