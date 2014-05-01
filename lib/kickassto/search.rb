@@ -19,6 +19,7 @@ module KickassTo
 
         seeders     = row.search('td')[4].text.to_i
         leechers    = row.search('td')[5].text.to_i
+        torrent_link = row.search('td .iaconbox a.idownload')
         magnet_link = row.search('td .iaconbox a.imagnet')[0]['href']
         category    = row.search('td .torrentname span strong a')[0].text
         url         = row.search('.torrentname .torType').attribute('href').to_s
@@ -27,6 +28,7 @@ module KickassTo
         torrent = {:title       => title,
                    :seeders     => seeders,
                    :leechers    => leechers,
+                   :torrent_link => torrent_link, 
                    :magnet_link => magnet_link,
                    :category    => category,
                    :torrent_id  => torrent_id,
